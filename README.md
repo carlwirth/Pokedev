@@ -27,5 +27,14 @@ As long as the server is running, you don't need to build to visualize.  Neverth
 
 
 
+Authors
+---
+- Elijah Brown: Developer
+- Carl Wirth: Developer
+- Roberto Morado: Developer
 
+
+Credits
+---
+[PokeAPI](http://pokeapi.co/): Pokémon data.
 
