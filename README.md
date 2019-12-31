@@ -1,31 +1,31 @@
-Pokedev ![under development](https://img.shields.io/badge/coverage-60%25-yellow)
-====
+# Pokedev
+Tool for indexing data regarding the various species of Pokemon™. This project was built as a client-side Javascript webapp.
+## Getting Started
+These instructions will allow you to get a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Prerequisites
+Start by cloning the following repository on your local machine.  
+```git clone https://github.com/roramigator/Pokedev```  
+This will create a copy of the project on your current path.
+### Installing
+At this point you would have a directory, *Pokedev*, in your current path.  Continue by changing directories into it... 
 
-Tool for indexing data from the [PokeAPI](http://pokeapi.co/), built as a client-side Javascript webapp.
+```cd Pokedev```
 
-Project Requirements
----
+... and install dependencies.
 
-* [x] Your project must make one asynchronous call per person in your group.
-* [x] You must use an aysnchronous library or API that we covered in class (Fetch, Axios and/or Async & Await).
-* [ ] You will need at least one API that will return images somewhere within the results. You must display images on the page from this API call.
-* [x] You must store content in simple data structures (arrays, objects and sets).
-* [x] Your code must contain at least one high order function with arrays (e.g. _Array.forEach_, _Array.map_, _Array.find_, _Array.filter_ and _Array.reduce_).
-* [x] Your code should not have any Cross Site Scripting (XSS) vulnerabilities.
-* [x] You must have at least one arrow function.
-* [x] Do not use _var_.
-* [x] You must show and hide DOM elements on the screen.
-* [x] You must handle at least three different events.
-* [ ] You must handle user input somewhere within the project. (For example, handle a search engine or display text that the user typed somewhere on the page).
-* [x] Limit your use of global variables. You can do this by organizing yours code.
-* [x] You must create a new repository for this project. Everyone in the group should be contributors.
+```npm install```
 
-Authors
----
-- Elijah Brown: Developer
-- Carl Wirth: Developer
-- Roberto Morado: Developer
+This should have installed *webpack*, *sass* and *webpack-server-dev*, which are use to build, style, and test the project respectively.
+## Up and running
+**Pokedev** is a Javascript webapp, which means you have to run it on the browser. To do this, you need *webpack* to bundle all the needed files.
+```npm run build``` 
+Once *webpack* is done building, you can view the project on the browser using the path to *index.html*.  It would look something like this: **.../path/to/Pokedev/index.html**. 
+Every time a change is made, a new build is needed to read those changes.  *webpack-server-dev* allows the visualization of code without the need of building every time you save.
+Start *webpack-server-dev* to preview without running a build.
+```npm run server```
+As long as the server is running, you don't need to build to visualize.  Nevertheless, when the server is stopped, the changes made while running are not bundled. Therefore, *you need to run a build after finishing with the dev server*.  
 
-Credits
----
-[PokeAPI](http://pokeapi.co/): Pokémon data.
+
+
+
+
