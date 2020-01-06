@@ -30,6 +30,12 @@ const info = action => {
 };
 //  ---
 
+const data = () => {
+  if(select(".data.open")){
+    select(".data").classList.toggle('open');
+  }
+};
+
 //  CLICKABLE POKEBALL TOP & BOTTOM
 select(".top").addEventListener("click", () => {
   const frame = select(".frame");
@@ -42,6 +48,8 @@ select(".top").addEventListener("click", () => {
     select(".info").classList.toggle('open');
   }
 
+  data();
+
 });
 
 select(".bottom").addEventListener("click", () => { document.location.href="/"; });
@@ -50,5 +58,6 @@ select(".bottom").addEventListener("click", () => { document.location.href="/"; 
 //  EXPORTS
 module.exports = {
     select,
-    info
+    info,
+    data
 };

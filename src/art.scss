@@ -69,6 +69,7 @@ $size: 12em;
 body {
   background: #ebf0f6;
   font-family: 'Solway', serif;
+  overflow: hidden;
 }
 
 /* width */
@@ -110,14 +111,28 @@ body {
   &.open{
     display: block;
   }
+
+  div {
+    padding: 1em;
+    span{
+      margin: 0 0.5em;
+    }
+    .moves {
+      text-align: center;
+      font-size: 1.5em;
+      span {
+        display: block;
+      }
+    }
+  }
 }
 
 .info {
   padding: 1.5em;
   position: absolute;
   width: 20em;
-  height: 47.8%;
-  right: 19.7%;
+  height: 45.6%;
+  right: 19.9%;
   top: 14.5em;
 
   color: #f6f6f6;
@@ -134,22 +149,9 @@ body {
     display: block;
   }
 
-  .more{
-    cursor: pointer;
-    color: #414141;
-    font-size: 1em;
-    text-align: center;
-    border: none;
-    background: white;
-    padding: 0.5em;
-    border-radius: 0.3em;
-    transition: all 0.5s ease;
-    z-index: 10;
-
-    &:hover{
-      color: white;
-      background: #46b5d1;
-    }
+  .flavor {
+    font-size: 1.3em;
+    text-align: justify;
   }
 
   div{
@@ -276,6 +278,8 @@ body {
     overflow: hidden;
 
     div{
+      text-align: center;
+      padding: 0;
       span{
         .left, .right{
           cursor: pointer;
@@ -325,12 +329,51 @@ body {
           color: #414141;
           font-size: 1em;
           position: relative;
-          display: block;
+          float: left;
+          display: inline-block;
           margin: 0 auto;
           margin-bottom: 1em;
           text-align: center;
           border: none;
-          padding: 0.5em;
+          padding: 0.5em 2em;
+          border-radius: 0.3em;
+          transition: all 0.5s ease;
+          z-index: 100;
+
+          &:hover{
+            color: white;
+            background: #52d681;
+          }
+        }
+
+        .star{
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          top: -0.4em;
+          color: #888;
+          font-size: 4em;
+          transition: all 0.5s ease;
+          z-index: 101;
+
+          &:hover{
+            color: #f0cf85;
+            // #ffcc00 -> selected
+          }
+        }
+
+        .query{
+          cursor: pointer;
+          color: #414141;
+          font-size: 1em;
+          float: right;
+          position: relative;
+          display: inline-block;
+          margin: 0 auto;
+          margin-bottom: 1em;
+          text-align: center;
+          border: none;
+          padding: 0.5em 2em;
           border-radius: 0.3em;
           transition: all 0.5s ease;
           z-index: 100;
@@ -360,6 +403,24 @@ body {
         &:hover{
           background: #f0d879;
         }
+      }
+    }
+
+
+    .favorites{
+      text-align: center;
+      div{
+        span{
+          color: #414141;
+          font-size: 1em;
+          &:before{
+            content: '#';
+          }
+        }
+      }
+      p{
+        color: #414141;
+        font-size: 2.5em;
       }
     }
 
@@ -393,7 +454,7 @@ body {
         }
       }
       p{
-        font-size: 3em;
+        font-size: 2em;
         color: #414141;
         text-align: center;
         font-size: 4em;
@@ -423,6 +484,13 @@ body {
     }
 
 
+    .favorites {
+      p {
+        text-align: center;
+        font-size: 2em;
+        color: white;
+      }
+    }
   }
 }
 
